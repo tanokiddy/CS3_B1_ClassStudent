@@ -31,7 +31,11 @@ class StudentManager:
         for student in self.students:
             if student.chemistry_grade < grade:
                 print(student)
-
+    def print_all_students(self):
+        print("List of all students:")
+        for student in self.students:
+            print(student)
+        print()
 
 # Initialize the StudentManager
 manager = StudentManager()
@@ -43,9 +47,11 @@ manager.add_student(Student("S3", "Le Van C", 5.5, 5.0, 4.0))
 manager.add_student(Student("S4", "Hoang Thi D", 6.0, 5.5, 8.0))
 manager.add_student(Student("S5", "Pham Van E", 4.0, 4.5, 3.5))
 
+# Print all students
+manager.print_all_students()
+
 # Print students with average grade above 5
 manager.print_students_with_avg_grade_above(5)
 
 # Print students with Chemistry grade below 5
 manager.print_students_with_chemistry_grade_below(5)
-
